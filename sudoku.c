@@ -94,16 +94,16 @@ List* get_adj_nodes(Node* n){
 }
 
 
-int is_final(Node* n){
-  int i,j;
-  for(i= 0 ; i<9;i++){
-      for(j=0; j<9;j++){
-        if (n->sudo[i][j] == 0)
-          return 0;
+int is_final(Node* n) {
+  int i, j;
+  for (i = 0; i < 9; i++) {
+      for (j = 0; j < 9; j++) {
+          if (n->sudo[i][j] == 0) return 0;
       }
   }
-    return 0;
+  return 1;
 }
+
 
 Node* DFS(Node* initial, int* cont){
   return NULL;
