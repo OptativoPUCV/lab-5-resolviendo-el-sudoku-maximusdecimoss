@@ -26,3 +26,22 @@ test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dl
         ^~~~~~~
 cc1.exe: all warnings being treated as errors
 65234a3
+Fri, May 16, 2025  9:58:33 PM: 
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function 'is_valid':
+sudoku.c:48:25: error: unused variable 'sub' [-Werror=unused-variable]
+     int row[10],col[10],sub[10];
+                         ^~~
+sudoku.c:48:17: error: unused variable 'col' [-Werror=unused-variable]
+     int row[10],col[10],sub[10];
+                 ^~~
+sudoku.c:47:15: error: unused variable 'l' [-Werror=unused-variable]
+     int i,j,k,l;
+               ^
+test.c: At top level:
+test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+cc1.exe: all warnings being treated as errors
+f99a3ad
