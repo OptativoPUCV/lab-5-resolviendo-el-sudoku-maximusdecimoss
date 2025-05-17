@@ -150,3 +150,31 @@ test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dl
         ^~~~~~~
 cc1.exe: all warnings being treated as errors
 b9a357b
+Fri, May 16, 2025 10:22:50 PM: 
+ sudoku.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function 'DFS':
+sudoku.c:113:14: error: expected ')' before ';' token
+   push (stack;initial);
+              ^
+              )
+sudoku.c:113:3: error: too few arguments to function 'push'
+   push (stack;initial);
+   ^~~~
+In file included from test.c:4:
+list.h:33:6: note: declared here
+ void push(Stack* s, void* data);
+      ^~~~
+test.c: At top level:
+test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+In file included from test.c:5:
+sudoku.c: In function 'DFS':
+sudoku.c:118:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+c79e960

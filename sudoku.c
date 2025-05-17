@@ -106,9 +106,16 @@ int is_final(Node* n) {
 
 
 Node* DFS(Node* initial, int* cont){
+
+  if(is_final(initial)){
+    return initial;
+  Stack* stack = createStack();
+  push (stack;initial);
+  *cont = 0;
+
   return NULL;
 }
-
+}
 
 
 /*
