@@ -123,7 +123,7 @@ Node* DFS(Node* initial, int* cont) {
       List* adj_nodes = get_adj_nodes(current);
       Node* adj = first(adj_nodes);
       while (adj != NULL) {
-          push(stack, adj)
+          push(stack, adj);
           adj = next(adj_nodes);
       }
 
@@ -131,9 +131,10 @@ Node* DFS(Node* initial, int* cont) {
       free(adj_nodes);
   }
 
-  clean(stack)
-  return NULL
+  clean(stack);
+  return NULL;
 }
+
 
 /*
 int main( int argc, char *argv[] ){
