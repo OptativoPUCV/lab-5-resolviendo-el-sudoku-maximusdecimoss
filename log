@@ -313,3 +313,30 @@ sudoku.c:136:1: error: control reaches end of non-void function [-Werror=return-
  ^
 cc1.exe: all warnings being treated as errors
 7168e16
+Sat, May 17, 2025 12:38:20 AM: 
+Compilation failed
+In file included from test.c:5:
+sudoku.c: In function 'DFS':
+sudoku.c:126:27: error: expected ';' before 'adj'
+           push(stack, adj)
+                           ^
+                           ;
+           adj = next(adj_nodes);
+           ~~~              
+sudoku.c:134:15: error: expected ';' before 'return'
+   clean(stack)
+               ^
+               ;
+   return NULL
+   ~~~~~~       
+test.c: At top level:
+test.c:7:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+In file included from test.c:5:
+sudoku.c: In function 'DFS':
+sudoku.c:136:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+5615966
